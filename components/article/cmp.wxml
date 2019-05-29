@@ -1,0 +1,57 @@
+<!--components/article/cmp.wxml-->
+<view class='container'>
+  <view class='avatar'>
+    <d-avatarMark avatar-src='{{articleDetail.mark.avatar}}'
+                  people='{{articleDetail.mark.people}}'
+                  count='{{articleDetail.mark.count}}' />
+  </view>
+
+  <view>
+    <d-bigImg wx:if='{{articleDetail.type === 0}}'
+              img-src='{{articleDetail.imgArray[0]}}' 
+              main-title='{{articleDetail.mainTitle}}' />
+
+    <d-nineImg wx:elif='{{articleDetail.type === 1}}'
+              img-arr='{{articleDetail.imgArray}}'
+              main-title='{{articleDetail.mainTitle}}' />
+
+    <d-imgText wx:elif='{{articleDetail.type === 2}}'
+            main-title='{{articleDetail.mainTitle}}' 
+            sub-title='{{articleDetail.subHead}}' 
+            img-src='{{articleDetail.imgArray[0]}}' />
+
+    <d-video wx:elif='{{articleDetail.type === 3}}'
+            video-src='{{articleDetail.video.src}}' 
+            poster='{{articleDetail.video.poster}}'
+            main-title='{{articleDetail.mainTitle}}'
+            duration='{{articleDetail.video.duration}}'
+            video-id='{{articleDetail.video.id}}' />
+
+    <d-pureText wx:else
+                main-title='{{articleDetail.mainTitle}}'
+                sub-title='{{articleDetail.subHead}}' />
+
+  </view>
+
+  <view class='control-box'>
+    <view>
+      <d-tag tag='{{articleDetail.tag}}' tag-id='{{articleDetail.tagId}}' />
+    </view>
+    <view class='btn-box'>
+      <view class='btn'>
+        <d-more tag='{{articleDetail.tag}}' />
+      </view>
+      <view class='btn'>
+        <d-imgBtn class='share' open-type='share'>
+          <image slot='img' src='/images/mark/relay.png'></image>
+        </d-imgBtn>
+      </view>
+      <view class='btn'>
+        <d-like like='{{likeStatus}}' 
+                art-id='{{articleDetail.artId}}' 
+                catch:liketap='onLikeTap' />
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<!--components/avatarMark/cmp.wxml-->
+<view class='container'>
+  <image class='avatar' src='{{avatarSrc}}'></image>
+  <text class='mark'>{{people}}等 {{count}} 人马克了</text>
+</view>

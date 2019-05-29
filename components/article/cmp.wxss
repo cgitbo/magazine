@@ -1,0 +1,28 @@
+/* components/article/cmp.wxss */
+
+.container {
+  background-color: #fff;
+}
+
+.control-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.btn-box {
+  display: flex;
+}
+
+.btn-box .btn {
+  margin-left: 20rpx;
+}
+
+.avatar {
+  padding: 20rpx;
+}
+
+.share, .share image {
+  width: 50rpx;
+  height: 50rpx;
+}

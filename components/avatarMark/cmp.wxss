@@ -1,0 +1,17 @@
+/* components/avatarMake/cmp.wxss */
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.mark {
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 20rpx;
+}

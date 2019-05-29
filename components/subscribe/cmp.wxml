@@ -1,0 +1,5 @@
+<!--components/subscribe/cmp.wxml-->
+<view class='container'>
+  <view class='sub {{active && "active"}}' 
+        catch:tap='onSubTap'>{{active?'已订阅':'订阅'}}</view>
+</view>

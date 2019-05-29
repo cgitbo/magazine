@@ -1,0 +1,49 @@
+/* pages/search/search.wxss */
+
+.search-box {
+  padding: 20rpx;
+}
+
+.recommend-box {
+  margin-bottom: 60rpx;
+  margin-top: 40rpx;
+  padding: 0 20rpx;
+}
+
+.recommend-box::before, .recommend-box::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.recommend-box .tag {
+  font-size: 36rpx;
+  padding-top: 40rpx;
+}
+
+.recommend-box .list {
+  font-size: 26rpx;
+  padding: 5rpx 0;
+}
+
+.recommend-box .list:last-child {
+  padding-bottom: 40rpx;
+}
+
+.loading-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 120rpx;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}

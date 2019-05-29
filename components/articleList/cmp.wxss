@@ -1,0 +1,29 @@
+/* components/articleList/cmp.wxss */
+
+.container {
+  padding: 24rpx;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.content {
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.no-more {
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+.loading-box {
+  position: relative;
+  padding:10px;
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

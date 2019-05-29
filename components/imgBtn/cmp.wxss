@@ -1,0 +1,6 @@
+/* components/imgBtn/cmp.wxss */
+.btn {
+  padding: 0 !important;
+  border: 0 !important;
+  line-height: unset;
+}

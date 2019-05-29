@@ -1,0 +1,19 @@
+<!--components/articleList/cmp.wxml-->
+<view class='container'>
+
+  <view class='content'>
+    <d-article class='content'
+            wx:for='{{articleList}}' 
+            wx:key='{{artId}}'
+            article-detail='{{item}}' />
+  </view>
+
+  <view class='loading-box' hidden='{{!loading}}'>
+    <d-loading class='loading' />
+  </view>
+
+  <view class='no-more'>
+    <text hidden='{{!noMoreData}}'>没有过多了</text>
+  </view>
+
+</view>

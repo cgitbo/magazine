@@ -1,0 +1,31 @@
+/* pages/mark/mark.wxss */
+
+.user-box {
+  padding: 20rpx;
+  height: 180rpx;
+}
+
+.name-avatar-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 36rpx;
+}
+
+.avatar image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.share {
+  display: inline-block;
+  margin-top: 40rpx;
+}
+
+.share image {
+  width: 50rpx;
+  height: 50rpx;
+}

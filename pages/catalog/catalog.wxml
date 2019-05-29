@@ -1,0 +1,44 @@
+<!--pages/catalog/catalog.wxml-->
+<view class='container'>
+
+  <view class='search-box'>
+    <d-search />
+  </view>
+
+  <view class='mark-list-box'>
+    <view class='my-tag'>
+      <view class='tag-title'>我的杂志</view>
+      <view class='sub-title'>管理杂志</view>
+    </view>
+    <view class='mark-list'>
+      <d-tagList mark-list='{{markList}}'>
+        <view class='add' slot='before'>+</view>
+      </d-tagList>
+    </view>
+  </view>
+
+  <view class='tag-list-box'>
+
+    <view class='tag-list' 
+          wx:for='{{tagInfoList}}' 
+          wx:for-item='tagInfoList'
+          wx:key='{{index}}'>
+
+      <view class='title'>{{tagInfoList.title}} ></view>
+
+      <view class='item-box'
+            wx:for='{{tagInfoList.tagList}}'
+            wx:key='{{item.tagId}}'>
+
+        <view class='tag'># {{item.tag}}</view>
+
+        <d-subscribe tag-list='{{item}}' 
+                    tag-id='{{item.tagId}}'
+                    catch:subtap='onSubTap' />
+      </view>
+
+    </view>
+
+  </view>
+
+</view>

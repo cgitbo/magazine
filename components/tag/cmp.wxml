@@ -1,0 +1,4 @@
+<!--components/tag/cmp.wxml-->
+<view class='container'>
+  <text class='tag' catch:tap='onTagTap'>{{tag}}</text>
+</view>

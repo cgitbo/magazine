@@ -1,0 +1,17 @@
+/* components/nav/cmp.wxss */
+.container {
+  width: 100%;
+  white-space: nowrap;
+  padding-bottom: 20rpx;
+  background-color: #fff;
+}
+
+.type {
+  font-size: 40rpx;
+  color: #888;
+  padding: 0 30rpx;
+}
+
+.active {
+  color: #000;
+}

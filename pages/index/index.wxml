@@ -1,0 +1,27 @@
+<!--pages/index/index.wxml-->
+<view class='container'>
+
+  <d-nav class='nav' bind:nav='onNavTap' magazine-type-arr='{{magazineTypeArr}}' />
+
+  <d-recommend recommend='{{recommendInfo}}' 
+              class='recommend'
+              magazine-id='{{magazineId}}'
+              magazine-type-arr='{{magazineTypeArr}}' />
+  
+  <d-tagList mark-list='{{markList}}'>
+    <d-add slot='before' wx:if='{{magazineId == 0}}'></d-add>
+    <view slot='after' 
+          class='cata-log' 
+          catch:tap='onCatalogTap
+          wx:if='{{magazineId == 0}}'>···</view>
+  </d-tagList>
+
+  <d-articleList article-list='{{articleList}}'
+                more='{{getMore}}'
+                magazine-id='{{magazineId}}' />
+
+  <view class='loading-box' wx:if='{{showLoading}}'>
+    <d-loading class='loading' />
+  </view>
+
+</view>

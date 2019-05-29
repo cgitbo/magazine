@@ -1,0 +1,10 @@
+<!--components/imgText/cmp.wxml-->
+<view class='container'>
+  <view class='title-box'>
+    <view class='main-title'>{{mainTitle}}</view>
+    <view class='sub-title'>{{subTitle}}</view>
+  </view>
+  <view>
+    <image class='img' src='{{imgSrc}}'></image>
+  </view>
+</view>

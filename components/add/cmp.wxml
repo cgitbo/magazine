@@ -1,0 +1,4 @@
+<!--components/add/cmp.wxml-->
+<view class='container'>
+  <view class='add'>+</view>
+</view>

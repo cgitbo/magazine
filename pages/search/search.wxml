@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class='container'>
+  <view class='search-box'>
+    <d-search search-value='{{searchWorld}}' />
+  </view>
+
+  <view wx:if='{{!showLoading}}'>
+    <view class='recommend-box'>
+      <view class='tag'># {{searchRecommend.tag}}></view>
+      <view class='list' 
+            wx:for='{{searchRecommend.recommend}}'
+            wx:key='*this'>
+        {{item}}
+      </view>
+    </view>
+
+    <view class='article-box'>
+      <d-articleList article-list='{{searchArticleList}}' 
+                    more='{{more}}' 
+                    search-world='{{searchWorld}}' />
+    </view>
+  </view>
+
+  <view class='loading-box' wx:if='{{showLoading}}'>
+    <d-loading class='loading' />
+  </view>
+</view>
